@@ -42,11 +42,9 @@ nav ul li a.active{
     text-decoration: none;
 }
 nav ul{
-    position: relative;
     flex: 1;
     text-align: right;
     padding-right: 30px;
-    overflow-x: hidden;
 }
 nav ul li{
     display: inline-block;
