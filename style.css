@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
+html{
+    height: -webkit-fill-available;
+}
 body::-webkit-scrollbar{
     scroll-behavior: smooth;
     display: none;   
