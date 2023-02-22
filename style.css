@@ -208,7 +208,9 @@ a {
     overflow-x: auto;
     cursor:auto;
     padding: 2%;
-   
+}
+.image-track::-webkit-scrollbar{
+    display: none;
 }
 .image-track a{
     font-family: sans-serif;
