@@ -9,18 +9,73 @@ body::-webkit-scrollbar{
     display: none;   
 }
 .header {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     background-image: linear-gradient(transparent,#000428),url(images/background.jpg);
-    
     background-size: cover;
     background-position: center;
     padding: 0 3%;
     position: relative;
 }
+nav{
+    display: flex;
+    width: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0; 
+}
+nav a.logo{
+    font-size: 50px;
+    font-weight:bolder;
+    color: #fff;
+    font-style:italic;
+    text-decoration: none;
+    font-stretch:extra-expanded; 
+}
+nav ul li a.active{
+    size: 10%;
+    padding: 5px;
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+nav ul{
+    position: relative;
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+    overflow-x: hidden;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin:10px 30px;
+}
+nav ul li a{
+    color: #fff;
+    grid-template: 30px;
+    text-decoration: none;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height:3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: width 0.3s;
+}
+nav ul li a:hover::after{
+    width: 100%;    
+}
 .search-bar{
-    width: 100%;
-    max-height: 60%;
+    width: auto;
+    max-height: auto;
     background-color:rgb(69, 61, 77);
     opacity: 70%;
     background-size: cover;
@@ -45,60 +100,6 @@ body::-webkit-scrollbar{
     background-image: cover;
     border: 0;
 }
-nav{
-    display: flex;
-    width: 100%;
-    align-items: centre;
-    flex-wrap: wrap;
-    padding: 20px 0; 
-}
-nav a.logo{
-    font-size: 50px;
-    font-weight:bolder;
-    color: #fff;
-    font-style:italic;
-    text-decoration: none;
-    font-stretch:extra-expanded; 
-}
-nav ul li a.active{
-    size: 10%;
-    padding: 5px;
-    background-color: #fff;
-    color: black;
-    border-radius: 10px;
-    cursor: pointer;
-    text-decoration: none;
-}
-nav ul{
-    flex: 1;
-    text-align: right;
-    padding-right: 30px;
-}
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 30px;
-}
-nav ul li a{
-    color: #fff;
-    grid-template: 30px;
-    text-decoration: none;
-    position: relative;
-}
-nav ul li a::after{
-    content: '';
-    width: 0;
-    height:3px;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fff;
-    transition: width 0.3s;
-}
-nav ul li a:hover::after{
-    width: 100%;    
-}
 .container{
     color: #fff;
     position: relative;
@@ -106,17 +107,6 @@ nav ul li a:hover::after{
     padding-right: 10%;
     padding: 1%;
     bottom: 2%;
-}
-.container h2{
-    font-size: 50px;
-    font-weight: 600;
-    padding-top: 3%;
-    padding-bottom: 5% ;
-}
-.container p{
-    font-size: 30px;
-    font-weight: 600;
-    padding-bottom: 1%;
 }
 .container h1{
     font-size: 100px;
@@ -135,6 +125,17 @@ nav ul li a:hover::after{
         background-position: 2000px 0;
     }
 
+}
+.container h2{
+    font-size: 50px;
+    font-weight: 600;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+.container p{
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 1%;
 }
 .container .row{
     display: flex;
@@ -174,8 +175,8 @@ nav ul li a:hover::after{
     margin: 30px 10px;
 }
 .content{
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     padding: 0.1%;
     background-image: linear-gradient(#000428,transparent,#004e92,#000428),url(images/background2.jpg);
     background-size: cover ;
@@ -218,31 +219,44 @@ nav ul li a:hover::after{
     }
   }
   .image-track > .image{
-    width: 35%;
-    height: 35%;
+    width: auto;
+    height: auto;
     object-fit: cover;
     object-position: center;
-
 }
 .image-track{
     display:flex;
     gap:1%;
     position: relative;
     overflow-x: auto;
-    cursor:auto;
+    cursor: auto;
     padding: 0 1.5%;
 }
 .image-track #linux{
-    padding-top: 5%;
+    padding-top: 1%;
     height: 350px;
 }
 .image-track #apache{
-    padding-top: 4%;
-    width: 60%;
+    padding-top: 1%;
+    width: auto;
+    height: 300px;
 }
 .image-track #firefox{
-    padding-top: 5%;
+    padding-top: 1%;
+    height: 300px;
+}
+.image-track #libre{
+    padding-top: 1%;
     height: 350px;
+}
+.image-track #gimp{
+    padding-top: 1%;
+    height: 350px;
+}
+.image-track #blend{
+    padding-top: 1%;
+    width: auto;
+    height: 300px;
 }
 .image-track::-webkit-scrollbar{
     display: none;
