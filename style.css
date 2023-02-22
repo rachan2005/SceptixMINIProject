@@ -177,7 +177,7 @@ nav ul li a:hover::after{
     width: 100%;
     height: 100%;
     padding: 0.1%;
-    background-image: linear-gradient(#000428,transparent,#004e92),url(images/background2.jpg);
+    background-image: linear-gradient(#000428,transparent,#004e92,#000428),url(images/background2.jpg);
     background-size: cover ;
     color: #fff;
     background-position: center;
@@ -218,9 +218,9 @@ nav ul li a:hover::after{
     }
   }
   .image-track > .image{
-    width: 50vmin;
-    height: 56vmin;
-    object-fit: fill;
+    width: 35%;
+    height: 35%;
+    object-fit: cover;
     object-position: center;
 
 }
@@ -228,21 +228,32 @@ nav ul li a:hover::after{
     display:flex;
     gap:1%;
     position: relative;
-    overflow: cover;
     overflow-x: auto;
     cursor:auto;
-    padding: 1.5%;
+    padding: 0 1.5%;
+}
+.image-track #linux{
+    padding-top: 5%;
+    height: 350px;
+}
+.image-track #apache{
+    padding-top: 4%;
+    width: 60%;
+}
+.image-track #firefox{
+    padding-top: 5%;
+    height: 350px;
 }
 .image-track::-webkit-scrollbar{
     display: none;
 }
 .image-track a{
-    font-family: Franklin Gothic Medium;
-    font-size: 175%;
+    font-family: Arial;
+    font-size: 30px;
     padding: .37%;
-    height: 56vmin;
-    object-fit: fill;
-    writing-mode: vertical-rl;
+    height: 50%;
+    object-fit: cover;
+    writing-mode:vertical-lr;
     color: rgb(251, 250, 250);
     text-orientation: upright;
     text-decoration: none;
